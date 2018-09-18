@@ -10,7 +10,7 @@ public class RectangleTest {
 
  
 
-  @Test
+ 
 
   public void testGetArea() {
 
@@ -20,7 +20,7 @@ public class RectangleTest {
 
  
 
-  @Test
+ 
 
   public void testGetPerimeter() {
 
@@ -30,7 +30,7 @@ public class RectangleTest {
 
  
 
-  @Test
+
 
   public void testLength() {
 
@@ -39,8 +39,6 @@ public class RectangleTest {
   }
 
  
-
-  @Test
 
   public void testWidth() {
 
