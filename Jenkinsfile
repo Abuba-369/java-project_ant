@@ -14,7 +14,7 @@ ipipeline {
 
 post {
 	always {
-		archive'dist/*.jar'
+		archive'dist/.jar'
 		}
     }
     
