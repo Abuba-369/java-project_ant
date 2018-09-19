@@ -1,17 +1,17 @@
-pipeline{
+pipeline {
    agent any
 
-	    stages{
+	    stages {
  
-           	stage('unit Test'){
-		 steps{
+           	stage('unit Test') {
+		 steps {
 	            sh 'ant -f test.xml'
 			junit 'reports/results.xml'
                      }
 				  }
 
-			stage('build'){
-                          steps{
+			stage('build') {
+                          steps {
                              sh 'ant -f build.xml'
                                 }
 
@@ -20,8 +20,8 @@ pipeline{
 	           }
          
 
-post{
-	always{
+post {
+	always {
 		archiveArtifacts artifacts: 'dist/*.jar', fingerprint: true
 		}
     }
