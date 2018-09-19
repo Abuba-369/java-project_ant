@@ -1,25 +1,24 @@
-pipeline {
+ipipeline {
    agent any
 	options {
 	buildDiscarder(logRotator(numToKeepStr: '2', artifactNumToKeepStr:'1'))
 		}
-	    stages {
-
-	      stage('build'){
-	                  steps{
-	                     sh 'ant -f build.xml'
-                                }
+	    stages{
  
-                           }
-		stage('unit Test'){
+           	stage('unit Test'){
 		 steps{
 	            sh 'ant -f test.xml'
 			junit 'reports/results.xml'
                      }
+				  }
 
+			stage('build'){
+                          steps{
+                             sh 'ant -f build.xml'
+                                }
 
                
-	                       	  }
+	                       	      }
 	           }
          
 
